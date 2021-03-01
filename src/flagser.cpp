@@ -6,11 +6,11 @@
 #define SKIP_APPARENT_PAIRS
 #define USE_ARRAY_HASHMAP
 #define USE_CELLS_WITHOUT_DIMENSION
-#define SORT_COLUMNS_BY_PIVOT
+// #define SORT_COLUMNS_BY_PIVOT
 // #define WITH_HDF5
 // #define KEEP_FLAG_COMPLEX_IN_MEMORY
 // #define USE_COEFFICIENTS
-// #define MANY_VERTICES
+#define MANY_VERTICES
 
 #include "../include/parameters.h"
 #include "../include/persistence.h"

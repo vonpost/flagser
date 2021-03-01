@@ -5,7 +5,7 @@
 #include <string>
 #include <unordered_map>
 
-// #define USE_GOOGLE_HASHMAP
+#define USE_GOOGLE_HASHMAP
 
 #ifndef MANY_VERTICES
 // Assume that we have at most 65k vertices, and that there are at most ~2 billion cells
@@ -30,8 +30,9 @@ namespace std_algorithms = std;
 
 #ifdef USE_GOOGLE_HASHMAP
 #include <sparsehash/sparse_hash_map>
+#include "parallel_hashmap/phmap.h"
 template <class Key, class T, class Hash = std::hash<Key>, class Pred = std::equal_to<Key>>
-class hash_map : public google::sparse_hash_map<Key, T, Hash, Pred> {
+class hash_map : public phmap::flat_hash_map<Key, T, Hash, Pred> {
 public:
 	inline void reserve(size_t hint) { this->resize(hint); }
 };

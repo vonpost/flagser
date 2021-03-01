@@ -8,7 +8,6 @@
 #include <deque>
 #include <iostream>
 #include <queue>
-
 #include "definitions.h"
 #include "output/base.h"
 
